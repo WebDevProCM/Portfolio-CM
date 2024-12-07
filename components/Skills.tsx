@@ -5,15 +5,25 @@ import { motion, useInView } from "framer-motion";
 import SkillProgress from './SkillProgress';
 import { BorderBeam } from './ui/border-beam';
 import ShineBorder from './ui/shine-border';
+import PageTransition from './PageTransition';
 
 
 function Skills() {
-    const skills = ["Javascript", "Typescript", "Node.js/Epress.js", "Mongodb/Mysql", "ReactJS", "NextJs", "CSS Frameworks", "Authentication/ Authorization"]
+    const skills = [
+        {stack:"Javascript", percent: 95},
+        {stack:"Typescript", percent: 85},
+        {stack:"Node.js/Epress.js", percent: 95},
+        {stack:"Mongodb/Mysql", percent: 85}, 
+        {stack:"ReactJS", percent: 90},
+        {stack:"NextJs", percent: 85},
+        {stack:"CSS Frameworks", percent: 90},
+        {stack:"Authentication/ Authorization", percent: 80}
+    ]
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref);
 
     return (
-        <div className="flex flex-col justify-around gap-14 items-center max-w-[1400px] mx-auto text-center my-[200px]">
+        <div className="flex flex-col justify-around gap-14 items-center max-w-[1400px] mx-auto text-center my-[200px] lg:px-12 md:px-5 px-1">
             
             {/* <BackgroundGradient 
             containerClassName="sm:w-[350px] w-[260px] sm:h-[350px] h-[260px] rounded-[175px] flex justify-center items-center"
@@ -22,7 +32,7 @@ function Skills() {
                 className="bg-[#00010a] relative sm:min-w-[350px] min-w-[260px] sm:min-h-[350px] min-h-[260px] rounded-full flex justify-center items-center"
                 initial={{scale: 0}}
                 whileInView={{scale: 1}}
-                // viewport={{once:true}}
+                viewport={{once:true}}
                 transition={{duration: 0.9, type: 'spring', bounce: 0.45}}
             >
 
@@ -50,9 +60,9 @@ function Skills() {
                 viewport={{once: true}}
                 transition={{delay: 0.3}}
                 >
-                    {skill}
+                    {skill.stack}
                 </motion.p>
-                <SkillProgress />
+                <SkillProgress percent={skill.percent}/>
                 </div>)
             })
             : ""

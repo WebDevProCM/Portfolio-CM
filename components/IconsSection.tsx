@@ -35,7 +35,7 @@ function IconsSection() {
     <>
 
       <div 
-        className='relative overflow-hidden flex flex-row flex-wrap justify-center items-center max-w-[1400px] mx-auto my-[200px]'>
+        className='relative overflow-hidden flex flex-row flex-wrap justify-center items-center max-w-[1400px] mx-auto my-[200px] lg:px-12 md:px-5 px-1'>
         <div className="w-full absolute inset-0 h-screen">
           <Particles
             className="absolute inset-0"

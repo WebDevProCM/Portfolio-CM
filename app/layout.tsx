@@ -1,5 +1,5 @@
 import React from "react";
-import {Fjalla_One, Bebas_Neue} from "next/font/google";
+import {Fjalla_One, Bebas_Neue, Roboto_Serif, Lora} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
@@ -22,14 +22,28 @@ const bebas = Bebas_Neue({
   variable: '--font-bebas_neue',
 }) 
 
+const roboto = Roboto_Serif({
+  subsets: ["latin"],
+  weight: "700",
+  display: "auto",
+  variable: '--font-roboto_serif'
+})
+
+const lora = Lora({
+  subsets: ["latin"],
+  display: "auto",
+  weight: "400",
+  variable: "--font-lora"
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fjalla.variable} ${bebas.variable}`}>
-      <body className="relative">
+    <html lang="en" className={`${fjalla.variable} ${bebas.variable} ${roboto.variable} ${lora.variable}`}>
+      <body className="relative overflow-x-hidden">
         <ThemeProvider
             attribute="class"
             defaultTheme="dark"

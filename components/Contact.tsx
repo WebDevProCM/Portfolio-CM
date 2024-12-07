@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 function Contact() {
   return (
-    <div className='max-w-[1400px] mx-auto text-center md:mt-[200px] mt-[100px]' id="contact">
+    <div className='max-w-[1400px] mx-auto text-center md:mt-[200px] mt-[100px] lg:px-12 md:px-5 px-1' id="contact">
 
         <h1 className='max-w-[600px] mx-auto leading-[45px] md:text-[50px] text-[40px] text-white font-bebas'>
             {/* I&#39;m Ready to take your dreamed website to the  */}
@@ -23,7 +23,7 @@ function Contact() {
             className='mt-[40px] mx-auto font-fjalla md:text-[20px] text-[15px] leading-[30px] max-w-[900px] text-page-white-100'
             initial={{scaleY: 0}}
             whileInView={{scaleY: 1}}
-            // viewport={{once: true}}
+            viewport={{once: true}}
             transition={{duration: 0.4, delay: 0.5}}
         >
             Reach out to me today, Let&#39;s build something amazing. Your website awaits.
@@ -32,11 +32,11 @@ function Contact() {
         <button className="p-[3px] relative mt-[20px] font-fjalla">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
             <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                <Link href="https://github.com/WebDevProCM">Reach to Chamod Ud</Link>
+                <Link href="http://www.linkedin.com/in/chamod-udugama" target='_blank'>Reach to Chamod Ud</Link>
             </div>
         </button>
 
-        <div className='flex justify-between items-center mt-[130px]'>
+        <div className='flex justify-between items-center mt-[130px] lg:px-12 md:px-5 px-1'>
             <p className='font-fjalla md:text-[15px] text-[7px]'>copyright &#169; 2024 Chamod Udugama</p>
             <div className='flex items-center gap-[10px]'>
                 <Link href="https://github.com/WebDevProCM"><FaGithub size={30}/></Link>

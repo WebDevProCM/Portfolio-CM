@@ -19,6 +19,8 @@ export default function WordPullUp({
     show: {
       opacity: 1,
       transition: {
+        duration: 1,
+        delay: 7.7,
         staggerChildren: 1,
       },
     },

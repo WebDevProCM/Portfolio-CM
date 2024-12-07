@@ -6,14 +6,14 @@ import AnimatedCircularProgressBar from './ui/animated-circular-progress-bar';
 import { AnimatePresence } from 'framer-motion';
 
 
-function SkillProgress() {
+function SkillProgress({percent}: {percent: number}) {
     const [value, setValue] = useState(0);
  
     useEffect(() => {
         const handleIncrement = (prev: number) => {
-            if (prev === 85) {
+            if (prev === percent) {
                 clearInterval(interval);
-                return 85;
+                return percent;
             }
             return prev + 5;
         };

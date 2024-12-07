@@ -5,12 +5,14 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type Testimonial = {
-  quote: string;
+  description: string;
   name: string;
-  designation: string;
+  technologies: string;
   src: string;
+  link: string
 };
 export const AnimatedTestimonials = ({
   testimonials,
@@ -25,9 +27,9 @@ export const AnimatedTestimonials = ({
     setActive((prev) => (prev + 1) % testimonials.length);
   };
 
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  // const handlePrev = () => {
+  //   setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  // };
 
   const isActive = (index: number) => {
     return index === active;
@@ -40,9 +42,6 @@ export const AnimatedTestimonials = ({
     }
   }, [autoplay]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
   return (
     <div className="max-w-sm md:max-w-[1400px] mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
@@ -56,23 +55,19 @@ export const AnimatedTestimonials = ({
                     opacity: 0,
                     scale: 0.9,
                     z: -100,
-                    rotate: randomRotateY(),
                   }}
                   animate={{
-                    opacity: isActive(index) ? 1 : 0.7,
+                    opacity: isActive(index) ? 1 : 0.5,
                     scale: isActive(index) ? 1 : 0.95,
                     z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotateY(),
-                    zIndex: isActive(index)
-                      ? 999
-                      : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
+                    zIndex: isActive(index) ? 999 : 0,
+                    x: isActive(index) ? [0, -80, 0] : 0,
+                    rotate: isActive(index) ? 0 : -3,
                   }}
                   exit={{
                     opacity: 0,
                     scale: 0.9,
                     z: 100,
-                    rotate: randomRotateY(),
                   }}
                   transition={{
                     duration: 0.4,
@@ -80,14 +75,16 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <Image
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                  <Link href={testimonial.link} target="_blank">
+                    <Image
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      width={500}
+                      height={500}
+                      draggable={false}
+                      className="h-full w-full rounded-3xl object-cover object-center"
                   />
+                  </Link>
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -117,10 +114,10 @@ export const AnimatedTestimonials = ({
               {testimonials[active].name}
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
-              {testimonials[active].designation}
+              {testimonials[active].technologies}
             </p>
             <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
-              {testimonials[active].quote.split(" ").map((word, index) => (
+              {testimonials[active].description.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
                   initial={{
