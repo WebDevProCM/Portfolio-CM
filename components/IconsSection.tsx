@@ -19,16 +19,16 @@ import Particles from './ui/particles';
 
 function IconsSection() {
     const iconsArray = [
-        <TbBrandJavascript size={100} key={4} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
+        <TbBrandJavascript size={120} key={4} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <SiTypescript size={85} key={10} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <FaReact size={100} key={1} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
-        <RiNextjsFill size={100} key={9} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
+        <RiNextjsFill size={120} key={9} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <FaNodeJs size={100} key={7} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
-        <SiExpress size={100} key={8} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
+        <SiExpress size={110} key={8} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <DiMongodb size={100} key={2} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
-        <SiMysql size={100} key={3} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
+        <SiMysql size={110} key={3} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <RiTailwindCssFill size={100} key={6} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
-        <FaBootstrap size={100} key={5} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
+        <FaBootstrap size={110} key={5} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
     ];
 
   return (
@@ -51,6 +51,7 @@ function IconsSection() {
             className='relative z-20'
             key={i}
             initial={{opacity: 0}}
+            whileHover={{y:-25 ,scaleY:0.93, transition:{duration: 7 ,type: "spring", bounce: 1}}}
             viewport={{once: true}}
             whileInView={{opacity: 1}}
             transition={{duration: 1}}

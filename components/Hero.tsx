@@ -1,16 +1,10 @@
 "use client"
 
 import React from 'react'
-import profileImg from "@/public/images/profile img1.jpg";
+import profileImg from "@/public/images/profile img1.png";
 import {motion} from "framer-motion";
 import WordPullUp from './ui/word-pull-up';
-import FlipText from './ui/flip-text';
 import Image from 'next/image';
-import GradualSpacing from './ui/gradual-spacing';
-import DotPattern from './ui/dot-pattern';
-import { cn } from '@/lib/utils';
-import HeroMarguee from './HeroMarguee';
-import PageTransition from './PageTransition';
 
 function Hero() {
     return (

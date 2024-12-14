@@ -2,10 +2,10 @@ import React from "react";
 import {Fjalla_One, Bebas_Neue, Roboto_Serif, Lora} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
+import SmoothScrolling from "@/components/animations/SmoothScrolling";
 
 export const metadata = {
-  title: "My Portfolio",
+  title: "Chamod Udugama",
   description: "Discover about me",
 };
 
@@ -41,6 +41,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className={`${fjalla.variable} ${bebas.variable} ${roboto.variable} ${lora.variable}`}>
       <body className="relative overflow-x-hidden">
@@ -50,8 +51,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
         >
-          <Navbar />
-          {children}
+          <SmoothScrolling>
+            {children}
+          </SmoothScrolling>
+
         </ThemeProvider>
         </body>
     </html>

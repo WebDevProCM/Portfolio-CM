@@ -4,8 +4,6 @@ import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion";
 import SkillProgress from './SkillProgress';
 import { BorderBeam } from './ui/border-beam';
-import ShineBorder from './ui/shine-border';
-import PageTransition from './PageTransition';
 
 
 function Skills() {
@@ -20,7 +18,7 @@ function Skills() {
         {stack:"Authentication/ Authorization", percent: 80}
     ]
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref);
+    const isInView = useInView(ref, {once: true});
 
     return (
         <div className="flex flex-col justify-around gap-14 items-center max-w-[1400px] mx-auto text-center my-[200px] lg:px-12 md:px-5 px-1">

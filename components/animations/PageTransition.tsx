@@ -1,7 +1,7 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import { useEffect, useState } from "react";
+import {motion} from "framer-motion";
 
 interface screenSizeType{
     height: number,
@@ -84,7 +84,7 @@ function PageTransition() {
         }
     }
   return (    
-    <motion.div className="fixed h-screen w-screen z-50"
+    <motion.div className="fixed h-screen w-screen top-0 left-0 z-50 overflow-hidden flex justify-center items-center"
         animate={{display: "none"}}
         transition={{delay: 9}}
     >

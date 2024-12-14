@@ -40,10 +40,10 @@ function Projects() {
   return (
     <div 
     ref={projectRef}
-    className="overflow-hidden flex flex-col justify-center gap-16 items-center max-w-[1400px] mx-auto lg:px-12 md:px-5 px-1" id='projects'>
+    className="overflow-hidden flex flex-col justify-center sm:gap-16 gap-8 items-center max-w-[1400px] mx-auto lg:px-12 md:px-5 px-1" id='projects'>
 
         <motion.h1 
-            className='md:text-[50px] text-[20px] text-page-purple font-bebas mx-auto text-center mt-10' id="projects"
+            className='md:text-5xl text-3xl text-page-purple font-bebas mx-auto text-center mt-10' id="projects"
             style={{scale: scaleText}}
         >
                 SOME OF MY PROJECTS
