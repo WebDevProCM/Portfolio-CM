@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import {motion} from "framer-motion";
+import WordRotate from "../ui/word-rotate";
 
 interface screenSizeType{
     height: number,
@@ -76,13 +77,14 @@ function PageTransition() {
         },
     };
 
-    const textVariant = {
-        initial: {opacity: 0},
-        animate: {                
-            opacity: [0,1,0],
-            transition: {duration:6, ease: [0.76, 0, 0.24, 1]},
-        }
-    }
+    // const textVariant = {
+    //     initial: {opacity: 0},
+    //     animate: {                
+    //         opacity: [0,1,0],
+    //         transition: {duration:5.5, ease:"easeOut"},
+    //     }
+    // }
+
   return (    
     <motion.div className="fixed h-screen w-screen top-0 left-0 z-50 overflow-hidden flex justify-center items-center"
         animate={{display: "none"}}
@@ -94,7 +96,7 @@ function PageTransition() {
             animate= "animate"
         >
 
-            {texts.map((text, index) =>(
+            {/* {texts.map((text, index) =>(
                 <motion.p 
                     className='relative text-white text-6xl z-50 text-center'
                     key={index}
@@ -104,7 +106,12 @@ function PageTransition() {
                     {text}
 
                 </motion.p>
-            ))}
+            ))} */}
+                <WordRotate
+                className="relative text-white text-6xl z-50 text-center"
+                words={["Building the future,", "one line of code at a time", "Welcome to my portfolio", "your gateway to my digital journey"]}
+                duration={1650}
+                />
 
         </motion.div>
         {screenSize.width > 0 && <BlackSvg {...screenSize}/>} 

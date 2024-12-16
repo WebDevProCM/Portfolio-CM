@@ -1,21 +1,19 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaReact } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaBootstrap } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiPostman } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { SiMysql } from "react-icons/si";
 import { motion } from 'framer-motion';
 import Particles from './ui/particles';
+
 
 function IconsSection() {
     const iconsArray = [
@@ -31,12 +29,27 @@ function IconsSection() {
         <FaBootstrap size={110} key={5} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
     ];
 
+    const [screenSize, setScreenSize] = useState<boolean>(true);
+  
+    useEffect(() =>{
+      const resize = () =>{
+        setScreenSize(window.innerWidth > 500);
+      }
+  
+      resize();
+      window.addEventListener("resize", resize);
+  
+      return () => window.removeEventListener("resize", resize);
+    }, [])
+
+    const bouncingAnimation = {y:-25 ,scaleY:0.93, transition:{duration: 7 ,type: "spring", bounce: 1}}
+
   return (
     <>
 
       <div 
         className='relative overflow-hidden flex flex-row flex-wrap justify-center items-center max-w-[1400px] mx-auto my-[200px] lg:px-12 md:px-5 px-1'>
-        <div className="w-full absolute inset-0 h-screen">
+        <div className="w-full absolute inset-0 h-full">
           <Particles
             className="absolute inset-0"
             quantity={300}
@@ -51,7 +64,8 @@ function IconsSection() {
             className='relative z-20'
             key={i}
             initial={{opacity: 0}}
-            whileHover={{y:-25 ,scaleY:0.93, transition:{duration: 7 ,type: "spring", bounce: 1}}}
+            whileHover={screenSize ? bouncingAnimation : undefined}
+            whileTap={!screenSize ? bouncingAnimation : undefined}
             viewport={{once: true}}
             whileInView={{opacity: 1}}
             transition={{duration: 1}}

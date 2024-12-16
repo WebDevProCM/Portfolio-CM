@@ -19,7 +19,7 @@ function Hero() {
                     words="Hello There!"
                     /> */}
                     <motion.h1
-                        className='xl:text-7xl md:text-6xl text-5xl font-roboto text-page-black-300 md:text-left text-center tracking-[-0.02em] md:leading-[5rem]'
+                        className='xl:text-7xl md:text-6xl text-5xl font-roboto text-page-purple md:text-left text-center tracking-[-0.02em] md:leading-[5rem]'
                         initial={{scaleY: 0, transformOrigin: "bottom", opacity: 0}}
                         whileInView={{scaleY: 1, opacity: 1}}
                         viewport={{once: true}}

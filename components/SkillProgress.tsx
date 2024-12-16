@@ -8,28 +8,41 @@ import { AnimatePresence } from 'framer-motion';
 
 function SkillProgress({percent}: {percent: number}) {
     const [value, setValue] = useState(0);
+    const [circleSize, setcircleSize] = useState<string>("size-44");
  
     useEffect(() => {
-        const handleIncrement = (prev: number) => {
-            if (prev === percent) {
-                clearInterval(interval);
-                return percent;
-            }
-            return prev + 5;
-        };
-    
-        const interval = setInterval(() => {
-            setValue((prev) => handleIncrement(prev));
-        }, 300);
-    
-        return () => clearInterval(interval);
+      const handleIncrement = (prev: number) => {
+          if (prev === percent) {
+              clearInterval(interval);
+              return percent;
+          }
+          return prev + 5;
+      };
+
+      const resize = () =>{
+        setcircleSize(window.innerWidth > 500 ? "size-44" : "size-32");
+      }
+  
+      const interval = setInterval(() => {
+          setValue((prev) => handleIncrement(prev));
+      }, 300);
+
+      resize();
+      window.addEventListener("resize", resize);
+  
+      return () => {
+        clearInterval(interval); 
+        window.removeEventListener("resize", resize);
+      }
+
     }, []);
     
 
   return (
-    <main className="sm:w-[350px] w-[280px] mx-auto text-center">
+    <main className="mx-auto text-center">
       <AnimatePresence>
         <AnimatedCircularProgressBar
+          className={circleSize}
           max={100}
           min={0}
           value={value}

@@ -9,7 +9,7 @@ const Navbar = () =>{
     return(
         <motion.div 
         id="hero"
-        className="flex flex-row justify-between items-center py-8 lg:px-12 md:px-5 px-1 max-w-screen-2xl mx-auto my-0"
+        className="flex flex-row justify-between items-center py-8 lg:px-12 md:px-6 px-2 max-w-screen-2xl mx-auto my-0"
         initial={{
             opacity:0
         }}
@@ -21,26 +21,26 @@ const Navbar = () =>{
         }}
         >
             <motion.h2 
-            className="text-page-white-200 font-bebas sm:text-3xl text-2xl m:px-5 md:px-8 px-1"
+            className="text-page-white-200 font-bebas sm:text-3xl text-xl"
             whileHover={{color: "#FFFFFF"}}
             >
                 <Link href="#hero">WebDevPro</Link>
             </motion.h2>
-            <ul className="flex flex-row justify-end items-center text-xl">
+            <ul className="flex flex-row justify-center items-center md:gap-11 sm:gap-7 gap-5 text-xl">
                 <motion.li 
-                className="text-page-white-200 sm:text-2xl text-[18px] sm:px-5 md:px-8 px-1 font-bebas" 
+                className="text-page-white-200 sm:text-2xl text-[18px] font-bebas" 
                 whileHover={{color: "#FFFFFF"}}
                 >
                 <Link href="#about">About Me</Link>
                 </motion.li>
                 <motion.li 
-                className="text-page-white-200 sm:text-2xl text-[18px] sm:px-5 md:px-8 px-1 font-bebas"
+                className="text-page-white-200 sm:text-2xl text-[18px] font-bebas"
                 whileHover={{ color: "#FFFFFF"}}
                 >
                 <Link href="#projects">Projects</Link>
                 </motion.li>
                 <motion.li 
-                className="text-page-white-200 sm:text-2xl text-[18px] sm:px-5 md:px-8 px-1 font-bebas"
+                className="text-page-white-200 sm:text-2xl text-[18px] font-bebas"
                 whileHover={{color: "#FFFFFF"}}
                 >
                 <Link href="#contact">Contact Me</Link>

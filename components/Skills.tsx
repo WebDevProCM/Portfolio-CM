@@ -14,8 +14,8 @@ function Skills() {
         {stack:"Mongodb/Mysql", percent: 85}, 
         {stack:"ReactJS", percent: 90},
         {stack:"NextJs", percent: 85},
-        {stack:"CSS Frameworks", percent: 90},
-        {stack:"Authentication/ Authorization", percent: 80}
+        {stack:"CSS\nFrameworks", percent: 90},
+        {stack:"Authentication\nAuthorization", percent: 80}
     ]
     const ref = useRef<HTMLDivElement>(null);
     const isInView = useInView(ref, {once: true});
@@ -31,14 +31,14 @@ function Skills() {
                 initial={{scale: 0}}
                 whileInView={{scale: 1}}
                 viewport={{once:true}}
-                transition={{duration: 0.9, type: 'spring', bounce: 0.45}}
+                transition={{duration: 1, type: 'spring', bounce: 0.45}}
             >
 
                 <motion.h1 className="text-[4rem] whitespace-nowrap font-bebas text-page-purple uppercase"
                     initial={{scaleY: 0, opacity: 0}}
                     whileInView={{scaleY: 1, opacity: 1}}
                     viewport={{once: true}}
-                    transition={{delay: 0.4}}
+                    transition={{delay: 0.5}}
                 >
                     TOP SKILLS
                 </motion.h1>
@@ -46,13 +46,13 @@ function Skills() {
                 <BorderBeam size={250} duration={12} delay={9} colorFrom='#CBACF9' colorTo='#E4ECFF'/>
             </motion.div>
             {/* </BackgroundGradient> */}
-            <div className="flex flex-wrap gap-12 justify-center items-center" ref={ref}>
+            <div className="flex flex-wrap sm:gap-28 gap-12 justify-center items-end" ref={ref}>
 
             {isInView ?
             skills.map((skill, index) =>{
                 return(          
                 <div key={index} className="text-center">
-                <motion.p className="sm:text-lg text-[13px] mb-4 text-page-white font-bold block uppercase"
+                <motion.p className="sm:text-lg text-[13px] mb-4 text-page-white font-bold block uppercase whitespace-pre-line"
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 viewport={{once: true}}
