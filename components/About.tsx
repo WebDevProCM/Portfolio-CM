@@ -36,15 +36,15 @@ function About() {
       viewport={{once: true}}
       transition={{duration: 1}}
       >
-          I&#39;m Chamod Udugama, a zealous Full Stack Developer with a strong foundation in JavaScript. I bridge the gap
-              between front-end and back-end development, ensuring a cohesive development process. 
-              Proficiency in core web development technologies like HTML, CSS, and JavaScript and 
-              libraries like React.js for building user-friendly interfaces, CSS frameworks for responsive
-              design, Node.js / Express.js for robust back-ends and Mongodb/Mongoose for storing data 
-              in the database. My expertise extends to building RESTful APIs for seamless data exchange 
-              and implementing user authentication and authorization for secure applications. I have used
-              handlebars for several projects to render dynamic pages. Experience with Socket.io for 
-              building real-time applications like chat apps.
+          I&#39;m Chamod Udugama, a zealous Full Stack Developer with a strong foundation in JavaScript.  
+          I’m currently working as a freelancer, where I specialize in building modern, professional websites 
+          that align with the latest trends and feature sleek animations for an enhanced user experience.
+          Looking ahead, I’m planning to complete the final year of my software engineering degree to deepen 
+          my expertise and advance my career. My ultimate goal is to become a professional and senior software
+          engineer, leading innovative projects and creating impactful digital solutions.
+          I’m driven by the desire to craft user-friendly, aesthetically pleasing, and high-performance web and
+           mobile applications. Whether it’s collaborating on a team or tackling challenges independently, I’m
+            always excited to push boundaries and grow as a developer.
       </motion.p> 
     </div>
 

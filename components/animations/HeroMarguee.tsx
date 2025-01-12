@@ -47,7 +47,7 @@ function HeroMarguee() {
         style={{ whiteSpace: "nowrap" }}
         >
             <p
-              className='lg:text-9xl text-7xl font-bebas text-center text-white'
+              className='lg:text-9xl text-8xl font-bebas text-center text-white'
             >
                 A passionate full-stack developer with the enthusiasm to build responsive and modern websites and to learn and stay updated with the latest technologies.
             </p>

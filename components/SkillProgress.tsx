@@ -35,7 +35,7 @@ function SkillProgress({percent}: {percent: number}) {
         window.removeEventListener("resize", resize);
       }
 
-    }, []);
+    }, [percent]);
     
 
   return (

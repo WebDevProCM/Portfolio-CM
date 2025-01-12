@@ -14,20 +14,30 @@ const config: Config = {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
-		boxShadow: {
-		'inner-left-right': 'inset 10px 0 15px rgba(0, 0, 0, 0.2), inset -10px 0 15px rgba(0, 0, 0, 0.2)',
-		},
+  		boxShadow: {
+  			'inner-left-right': 'inset 10px 0 15px rgba(0, 0, 0, 0.2), inset -10px 0 15px rgba(0, 0, 0, 0.2)'
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		fontFamily: {
-  			fjalla: ['var(--font-fjalla_one)'],
-  			bebas: ['var(--font-bebas_neue)'],
-  			sans: ["var(--font-sans)"],
-			roboto: ["var(--font-roboto_serif)"],
-			lora: ["var(--font-lora)"]
+  			fjalla: [
+  				'var(--font-fjalla_one)'
+  			],
+  			bebas: [
+  				'var(--font-bebas_neue)'
+  			],
+  			sans: [
+  				'var(--font-sans)'
+  			],
+  			roboto: [
+  				'var(--font-roboto_serif)'
+  			],
+  			lora: [
+  				'var(--font-lora)'
+  			]
   		},
   		colors: {
   			'page-white': {
@@ -87,7 +97,8 @@ const config: Config = {
   		},
   		animation: {
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+  			'shiny-text': 'shiny-text 8s infinite'
   		},
   		keyframes: {
   			'border-beam': {
@@ -104,6 +115,14 @@ const config: Config = {
   				},
   				to: {
   					'background-position': '0% 0%'
+  				}
+  			},
+  			'shiny-text': {
+  				'0%, 90%, 100%': {
+  					'background-position': 'calc(-100% - var(--shiny-width)) 0'
+  				},
+  				'30%, 60%': {
+  					'background-position': 'calc(100% + var(--shiny-width)) 0'
   				}
   			}
   		}

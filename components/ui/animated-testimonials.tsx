@@ -6,13 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import AnimatedShinyText from "./animated-shiny-text";
 
 type Testimonial = {
   description: string;
   name: string;
   technologies: string;
   src: string;
-  link: string
+  github: string;
+  demo?: string;
 };
 export const AnimatedTestimonials = ({
   testimonials,
@@ -40,7 +42,7 @@ export const AnimatedTestimonials = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
 
   return (
     <div className="max-w-sm md:max-w-[1400px] mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
@@ -75,7 +77,7 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <Link href={testimonial.link} target="_blank">
+                  {/* <Link href={testimonial.link} target="_blank"> */}
                     <Image
                       src={testimonial.src}
                       alt={testimonial.name}
@@ -84,7 +86,7 @@ export const AnimatedTestimonials = ({
                       draggable={false}
                       className="h-full w-full rounded-3xl object-cover object-center"
                   />
-                  </Link>
+                  {/* </Link> */}
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -113,9 +115,17 @@ export const AnimatedTestimonials = ({
             <h3 className="text-2xl font-bold dark:text-white text-black">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <div className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].technologies}
-            </p>
+              <AnimatedShinyText className="inline-flex items-center justify-center transition ease-out hover:text-neutral-600 hover:duration-300">
+                <Link className="text-blue-600 underline" href={testimonials[active].github} target="_blank">| Github </Link>
+              </AnimatedShinyText>
+              {testimonials[active].demo && 
+                <AnimatedShinyText className="inline-flex items-center justify-center transition ease-out hover:text-neutral-600 hover:duration-300">
+                  <Link className="text-blue-600 underline" href={testimonials[active].demo} target="_blank">| Live Demo</Link>
+                </AnimatedShinyText>
+              }
+            </div>
             <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
               {testimonials[active].description.split(" ").map((word, index) => (
                 <motion.span
@@ -142,6 +152,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
+
           <div className="flex gap-4 pt-12 md:pt-0">
             {/* <button
               onClick={handlePrev}

@@ -15,25 +15,27 @@ function Projects() {
         description:
             "TrueElegance is a fully responsive e-commerce project that sells Perfumes.Features include user authentication (register, login), add to cart and APIs authorizations.",
         name: "TrueElegance: The Perfume Store",
-        technologies: "MERN Stack | E-commerce",
+        technologies: "MERN Stack | E-commerce ",
         src: "/images/ecommerce.png",
-        link: "https://github.com/WebDevProCM/E-commerce-FrontEnd"
+        github: "https://github.com/WebDevProCM/E-commerce-FrontEnd",
+        demo: "https://e-commerce-frontend-hmet.onrender.com/"
         },
         {
         description:
             "Developed a dynamic real-time chat application using Socket.io for efficient communication. Leverages React.js on the front-end for a user-friendly interface and Node.js with Express.js on the back-end for robust server-side functionality. User can Create/Join a chat room just using username and ID of the chat room by selecting profile icon.",
         name: "Chat App",
-        technologies: "Web Socket | ReactJs",
+        technologies: "Web Socket | ReactJs ",
         src: "/images/chat.png",
-        link: "https://github.com/WebDevProCM/chat-app-frontend"
+        github: "https://github.com/WebDevProCM/chat-app-frontend",
         },
         {
         description:
             "Developed a full-stack web application using Next.js for users to discover, share, and manage recipes. Implemented robust authentication (JWT), data management (Mongoose, DAL, DTO), and image handling (Cloudinary). Optimized performance with Next.js caching and enhanced user experience with smooth animations (Framer Motion).",
         name: "Food Recipes Sharing Web App",
-        technologies: "NextJs",
+        technologies: "NextJs ",
         src: "/images/nextjs.png",
-        link: "https://github.com/WebDevProCM/Meals-App"
+        github: "https://github.com/WebDevProCM/Meals-App",
+        demo: "https://nextgenrecipes.netlify.app/"
         },
     ];
 

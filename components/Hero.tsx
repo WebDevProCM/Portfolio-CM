@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import profileImg from "@/public/images/profile img1.png";
+import profileImg from "@/public/images/profile img1.jpg";
 import {motion} from "framer-motion";
 import WordPullUp from './ui/word-pull-up';
 import Image from 'next/image';
@@ -19,23 +19,33 @@ function Hero() {
                     words="Hello There!"
                     /> */}
                     <motion.h1
-                        className='xl:text-7xl md:text-6xl text-5xl font-roboto text-page-purple md:text-left text-center tracking-[-0.02em] md:leading-[5rem]'
+                        className='xl:text-5xl md:text-4xl text-3xl font-roboto text-page-purple md:text-left text-center tracking-[-0.02em]'
                         initial={{scaleY: 0, transformOrigin: "bottom", opacity: 0}}
                         whileInView={{scaleY: 1, opacity: 1}}
                         viewport={{once: true}}
                         transition={{duration: 0.3, delay: 7.2}}
                     >
-                        HELLO THERE!
+                        HELLO THERE! I&apos;M
                     </motion.h1>
 
                     <WordPullUp
-                    className="xl:text-9xl lg:text-8xl md:text-7xl text-6xl font-fjalla md:my-[20px] my-7 tracking-[-0.02em] md:leading-[5rem]"
-                    words="I`M CHAMOD..."
+                    className="xl:text-8xl lg:text-7xl md:text-6xl text-5xl font-fjalla lg:my-[20px] my-3 tracking-[-0.02em]"
+                    words="CHAMOD UDUGAMA"
                     />
+
+                    <motion.h1
+                        className='xl:text-5xl md:text-4xl text-3xl font-roboto text-page-purple md:text-right text-center tracking-[-0.02em]'
+                        initial={{scaleY: 0, transformOrigin: "bottom", opacity: 0}}
+                        whileInView={{scaleY: 1, opacity: 1}}
+                        viewport={{once: true}}
+                        transition={{duration: 0.3, delay: 7.2}}
+                    >
+                        Fullstack-Developer
+                    </motion.h1>
                 </div>
 
                 <motion.div 
-                className="flex shrink justify-center items-start z-20"
+                className="relative flex shrink justify-center items-start z-20 pointer-events-none"
                 initial={{
                     scaleY:0,
                     transformOrigin: "bottom",
@@ -53,7 +63,8 @@ function Hero() {
                 >
                     
                     <Image src={profileImg} width={330} height={440} priority sizes="(min-width:768px) 430px, 300px" 
-                    className="md:max-w-[330px] max-w-[280px] rounded-[20px]" alt="Profile picture"/>
+                    className="md:max-w-[330px] rounded-[20px]" alt="Profile picture"/>
+
                 </motion.div>
 
                 {/* <div className='md:absolute relative bottom-0 z-20 mx-auto md:-mb-14 max-w-[1200px]'>

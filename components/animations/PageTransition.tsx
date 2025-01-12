@@ -67,9 +67,6 @@ function PageTransition() {
         return () => window.removeEventListener("resize", resize);
     }, [])
 
-    const opac = screenSize.width === undefined ? 1 : 0
-    const texts = ["HI THERE!", "GLAD TO HAVE YOU", "HERE..."]
-
     const parentVariant = {
         animate: {
         display: "none",
@@ -108,8 +105,8 @@ function PageTransition() {
                 </motion.p>
             ))} */}
                 <WordRotate
-                className="relative text-white text-6xl z-50 text-center"
-                words={["Building the future,", "one line of code at a time", "Welcome to my portfolio", "your gateway to my digital journey"]}
+                className="relative text-white text-6xl z-50 text-center font-bebas"
+                words={["Building the future,", "one line of code at a time", "Welcome to my portfolio", "your gateway to my digital journey", " "]}
                 duration={1650}
                 />
 

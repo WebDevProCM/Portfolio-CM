@@ -37,7 +37,7 @@ function Contact() {
         </button>
 
         <div className='flex justify-between items-end mt-[130px] lg:px-12 md:px-5 px-1'>
-            <p className='font-fjalla md:text-[15px] text-[10px]'>copyright &#169; 2024 Chamod Udugama</p>
+            <p className='font-fjalla md:text-[15px] text-[10px] uppercase'>copyright &#169; 2025 Chamod Udugama</p>
             <div className='flex items-center gap-[10px]'>
                 <Link href="https://github.com/WebDevProCM"><FaGithub size={30}/></Link>
                 <Link href="mailto:chamodmenuka320@gmail.com"><SiGmail size={30}/></Link>

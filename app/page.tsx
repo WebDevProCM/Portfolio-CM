@@ -10,11 +10,12 @@ import PageTransition from "@/components/animations/PageTransition";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import {motion} from "framer-motion";
+import Education from "@/components/Education";
 
 export default function Home() {
   return (
     <motion.main 
-      className="relative w-screen overflow-x-hidden overflow-y-hidden mx-auto"
+      className="relative w-full overflow-x-hidden overflow-y-hidden mx-auto"
       initial={{height: "100vh", overflowY: "hidden"}}
       animate={{height: "auto", overflowY: "auto"}}
       transition={{delay: 7}}  
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero />
       <HeroMarguee />
       <About />
+      <Education />
       <Skills />
       <IconsSection />
       <Projects />
