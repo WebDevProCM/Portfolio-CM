@@ -30,7 +30,7 @@ function HeroMarguee() {
   const delayTime:number = screenSize.width > 500 ? 5.5 : 2.5; 
 
   return (
-    <motion.div className='relative overflow-hidden sm:-mt-12 -mt-8 max-w-[1800px] mx-auto h-32 z-30'
+    <motion.div className='relative overflow-hidden max-w-[1800px] mx-auto h-32 z-30 sm:-mt-5'
       initial={{opacity: 0}}
       animate={{opacity: 1}}
       transition={{duration: 2}}
@@ -47,7 +47,7 @@ function HeroMarguee() {
         style={{ whiteSpace: "nowrap" }}
         >
             <p
-              className='lg:text-9xl text-8xl font-bebas text-center text-white'
+              className='lg:text-9xl text-8xl font-bebas text-center dark:text-white text-page-black'
             >
                 A passionate full-stack developer with the enthusiasm to build responsive and modern websites and to learn and stay updated with the latest technologies.
             </p>

@@ -8,39 +8,37 @@ import Image from 'next/image';
 
 function Hero() {
     return (
-        <div className={"relative max-w-[1400px] lg:px-12 md:px-5 px-1 mx-auto"}>
-            {/* <PageTransition /> */}
+        <div className={"relative max-w-[1400px] lg:px-12 md:px-5 px-1 mx-auto sm:m-8"}>
     
             <div className="flex md:flex-row flex-col justify-around items-center h-full md:gap-0 gap-4 z-10">     
 
-                <div className="lg:shrink-0 shrink z-20 md:mt-[0] mt-[40px]">
-                    {/* <WordPullUp
-                    className="xl:text-7xl md:text-6xl text-5xl font-fjalla text-page-black-300 text-left tracking-[-0.02em] md:leading-[5rem]"
-                    words="Hello There!"
-                    /> */}
+                <div className="lg:shrink-0 shrink z-20 md:mt-[0] mt-10">
+
                     <motion.h1
-                        className='xl:text-5xl md:text-4xl text-3xl font-roboto text-page-purple md:text-left text-center tracking-[-0.02em]'
+                        className='text-4xl font-roboto dark:text-page-purple text-page-black md:text-left text-center tracking-[-0.02em]'
                         initial={{scaleY: 0, transformOrigin: "bottom", opacity: 0}}
                         whileInView={{scaleY: 1, opacity: 1}}
                         viewport={{once: true}}
                         transition={{duration: 0.3, delay: 7.2}}
                     >
-                        HELLO THERE! I&apos;M
+                        <span className='dark:text-white text-black'>HI,</span> I&apos;M CHAMOD
                     </motion.h1>
 
                     <WordPullUp
-                    className="xl:text-8xl lg:text-7xl md:text-6xl text-5xl font-fjalla lg:my-[20px] my-3 tracking-[-0.02em]"
-                    words="CHAMOD UDUGAMA"
+                    className="md:text-7xl text-6xl dark:text-white text-page-black font-fjalla md:text-left text-center lg:my-[20px] my-3 tracking-[-0.02em]"
+                    words="FULL-STACK DEVELOPER"
                     />
 
                     <motion.h1
-                        className='xl:text-5xl md:text-4xl text-3xl font-roboto text-page-purple md:text-right text-center tracking-[-0.02em]'
+                        className='md:text-lg text-xs font-lora dark:text-page-purple text-page-black md:text-left text-center max-w-[771px] tracking-[-0.02em]'
                         initial={{scaleY: 0, transformOrigin: "bottom", opacity: 0}}
                         whileInView={{scaleY: 1, opacity: 1}}
                         viewport={{once: true}}
                         transition={{duration: 0.3, delay: 7.2}}
                     >
-                        Fullstack-Developer
+                        self-motivated developer with hands-on experience in building responsive full-stack web
+                        applications and a strong foundation in algorithms. Passionate about tackling complex challenges, learning
+                        emerging technologies, and collaborating with teams to implement best practices.
                     </motion.h1>
                 </div>
 
@@ -62,30 +60,12 @@ function Hero() {
                 }}
                 >
                     
-                    <Image src={profileImg} width={330} height={440} priority sizes="(min-width:768px) 430px, 300px" 
-                    className="md:max-w-[330px] rounded-[20px]" alt="Profile picture"/>
+                    <Image src={profileImg} width={280} height={390} priority sizes="(min-width:768px) 430px, 300px" 
+                    className="md:max-w-[330px] max-w-[250px] rounded-[20px]" alt="Profile picture"/>
 
                 </motion.div>
 
-                {/* <div className='md:absolute relative bottom-0 z-20 mx-auto md:-mb-14 max-w-[1200px]'>
-                    <GradualSpacing
-                        className="lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bebas text-center text-page-white-100 sm:leading-8 md:leading-[43px] lg:leading-[35px]"
-                        text="A passionate full-stack developer with the enthusiasm to build responsive and modern websites and to learn and stay updated with the latest technologies."
-                    />
-                </div> */}
             </div>
-          
-            {/* <HeroMarguee /> */}
-            {/* <DotPattern
-                width={20}
-                height={20}
-                cx={1}
-                cy={1}
-                cr={1}
-                className={cn(
-                "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
-                )}
-            /> */}
       
         </div>
     )

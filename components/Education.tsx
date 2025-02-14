@@ -23,13 +23,13 @@ function Education() {
     className="overflow-hidden flex flex-col justify-center sm:gap-16 gap-8 items-center max-w-[1400px] mx-auto lg:px-12 md:px-5 px-1" id='eduction'>
 
         <motion.h1 
-            className='md:text-5xl text-3xl text-page-purple font-bebas mx-auto text-center mt-10' id="eduction"
+            className='md:text-5xl text-3xl dark:text-page-purple text-page-black font-bebas mx-auto text-center mt-10' id="eduction"
             style={{scale: scaleText}}
         >
             EDUCATION
         </motion.h1>
 
-            <VerticalTimeline className="z-50" animate={true}>
+            <VerticalTimeline className="z-50" animate={false}>
                 {educationList.map((education, index) => (
                     <VerticalTimelineElement
                         key={index}

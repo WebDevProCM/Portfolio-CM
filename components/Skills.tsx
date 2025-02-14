@@ -27,14 +27,14 @@ function Skills() {
             containerClassName="sm:w-[350px] w-[260px] sm:h-[350px] h-[260px] rounded-[175px] flex justify-center items-center"
             > */}
             <motion.div 
-                className="bg-[#00010a] relative sm:min-w-[350px] min-w-[260px] sm:min-h-[350px] min-h-[260px] rounded-full flex justify-center items-center"
+                className="dark:bg-[#00010a] bg-white relative sm:min-w-[350px] min-w-[260px] sm:min-h-[350px] min-h-[260px] rounded-full flex justify-center items-center"
                 initial={{scale: 0}}
                 whileInView={{scale: 1}}
                 viewport={{once:true}}
                 transition={{duration: 1, type: 'spring', bounce: 0.45}}
             >
 
-                <motion.h1 className="text-[4rem] whitespace-nowrap font-bebas text-page-purple uppercase"
+                <motion.h1 className="text-[4rem] whitespace-nowrap font-bebas dark:text-page-purple text-page-black uppercase"
                     initial={{scaleY: 0, opacity: 0}}
                     whileInView={{scaleY: 1, opacity: 1}}
                     viewport={{once: true}}
@@ -52,7 +52,7 @@ function Skills() {
             skills.map((skill, index) =>{
                 return(          
                 <div key={index} className="text-center">
-                <motion.p className="sm:text-lg text-[13px] mb-4 text-page-white font-bold block uppercase whitespace-pre-line"
+                <motion.p className="sm:text-lg text-[13px] mb-4 dark:text-page-white text-text-page-light font-bold block uppercase whitespace-pre-line"
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 viewport={{once: true}}

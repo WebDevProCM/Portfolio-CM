@@ -44,7 +44,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${fjalla.variable} ${bebas.variable} ${roboto.variable} ${lora.variable}`}>
-      <body className="relative overflow-x-hidden">
+      <body className="relative overflow-x-hidden dark:bg-bg-dark bg-white">
         <ThemeProvider
             attribute="class"
             defaultTheme="dark"

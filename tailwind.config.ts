@@ -53,7 +53,12 @@ const config: Config = {
   				DEFAULT: '#000'
   			},
   			'page-purple': '#CBACF9',
+			'page-purple-hover': '#FFFFFF',
   			'page-blue': '#E4ECFF',
+			'bg-dark': "#00010a",
+			'bg-light': "#e5e5e5",
+			'text-page-black': '#08090a',
+			'text-page-light': '#737373',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
