@@ -5,6 +5,7 @@ import profileImg from "@/public/images/profile img1.jpg";
 import {motion} from "framer-motion";
 import WordPullUp from './ui/word-pull-up';
 import Image from 'next/image';
+import { TypingAnimation } from './magicui/typing-animation';
 
 function Hero() {
     return (
@@ -24,10 +25,9 @@ function Hero() {
                         <span className='dark:text-white text-black'>HI,</span> I&apos;M CHAMOD
                     </motion.h1>
 
-                    <WordPullUp
-                    className="md:text-7xl text-6xl dark:text-white text-page-black font-fjalla md:text-left text-center lg:my-[20px] my-3 tracking-[-0.02em]"
-                    words="FULL-STACK DEVELOPER"
-                    />
+                    <TypingAnimation delay={6700} duration={300} className='md:text-7xl text-6xl dark:text-white text-page-black font-fjalla md:text-left text-center lg:my-[20px] my-3 tracking-[-0.02em]'>
+                        FULL-STACK DEVELOPER
+                    </TypingAnimation>
 
                     <motion.h1
                         className='md:text-lg text-xs font-lora dark:text-page-purple text-page-black md:text-left text-center max-w-[771px] tracking-[-0.02em]'

@@ -44,6 +44,19 @@ function IconsSection() {
 
     const bouncingAnimation = {y:-25 ,scaleY:0.93, transition:{duration: 7 ,type: "spring", bounce: 1}}
 
+    const container = {
+      hidden: {},
+      show: {
+        transition: {
+          staggerChildren: 0.3
+        }
+      }
+    }
+    const iconAnimations = {
+      hidden: { opacity: 0 },
+      show: { opacity: 1 }
+    }
+
   return (
     <>
 
@@ -58,22 +71,29 @@ function IconsSection() {
             refresh
           />
         </div>
-        {iconsArray.map((icon, i) =>{
-          return(
-            <motion.div
-            className='relative z-20'
-            key={i}
-            initial={{opacity: 0}}
-            whileHover={screenSize ? bouncingAnimation : undefined}
-            whileTap={!screenSize ? bouncingAnimation : undefined}
-            viewport={{once: true}}
-            whileInView={{opacity: 1}}
-            transition={{duration: 1}}
-            >
-              {icon}
-            </motion.div>
-          )
-        })}
+        <motion.div
+          className='w-full flex flex-wrap justify-center items-center'
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{once: true}}
+        >
+          {iconsArray.map((icon, i) =>{
+            return(
+              <motion.div
+              className='relative z-20'
+              key={i}
+              variants={iconAnimations}
+              whileHover={screenSize ? bouncingAnimation : undefined}
+              whileTap={!screenSize ? bouncingAnimation : undefined}
+              viewport={{once: true}}
+              transition={{duration: 0.8}}
+              >
+                {icon}
+              </motion.div>
+            )
+          })}
+        </motion.div>
       </div>
 
     </>

@@ -20,7 +20,7 @@ function Contact() {
         </h1>
 
         <motion.p 
-            className='mt-[40px] mx-auto font-fjalla md:text-[20px] text-[15px] leading-[30px] max-w-[900px] dark:text-page-white-100 text-text-page-light'
+            className='mt-[40px] mx-auto font-fjalla md:text-[20px] text-[15px] sm:leading-[30px] leading-[26px] max-w-[900px] dark:text-page-white-100 text-text-page-light'
             initial={{opacity: 0}}
             whileInView={{opacity: 1}}
             viewport={{once: true}}
@@ -31,7 +31,7 @@ function Contact() {
 
         <button className="p-[3px] relative mt-[20px] font-fjalla">
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-            <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+            <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
                 <Link href="http://www.linkedin.com/in/chamod-udugama" target='_blank'>Reach to Chamod Ud</Link>
             </div>
         </button>

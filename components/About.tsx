@@ -34,7 +34,7 @@ function About() {
       initial={{x: 400, opacity: 0}}
       whileInView={{x: 0, opacity: 1}}
       viewport={{once: true}}
-      transition={{duration: 1}}
+      transition={{duration: 1, ease:"easeInOut"}}
       >
           I&#39;m Chamod Udugama, a zealous Full Stack Developer with a strong foundation in JavaScript.  
           I’m currently working as a freelancer, where I specialize in building modern, professional websites 

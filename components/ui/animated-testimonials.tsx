@@ -115,6 +115,7 @@ export const AnimatedTestimonials = ({
             <h3 className="text-2xl font-bold dark:text-white text-black">
               {testimonials[active].name}
             </h3>
+            
             <div className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].technologies}
               <AnimatedShinyText className="inline-flex items-center justify-center transition ease-out hover:text-neutral-600 hover:duration-300">
@@ -126,6 +127,7 @@ export const AnimatedTestimonials = ({
                 </AnimatedShinyText>
               }
             </div>
+
             <motion.p className="text-lg text-gray-500 mt-8 dark:text-neutral-300">
               {testimonials[active].description.split(" ").map((word, index) => (
                 <motion.span

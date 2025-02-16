@@ -11,6 +11,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import {motion} from "framer-motion";
 import Education from "@/components/Education";
+import ParallelText from "@/components/animations/ParallelText";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       <PageTransition />
       <Navbar />
       <Hero />
-      <HeroMarguee />
+      <ParallelText />
       <About />
       <Education />
       <Skills />
