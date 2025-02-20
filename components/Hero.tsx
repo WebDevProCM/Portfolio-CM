@@ -1,15 +1,14 @@
 "use client"
 
 import React from 'react'
-import profileImg from "@/public/images/profile img1.jpg";
 import {motion} from "framer-motion";
-import WordPullUp from './ui/word-pull-up';
 import Image from 'next/image';
 import { TypingAnimation } from './magicui/typing-animation';
+import profileImg from "@/public/images/profile img1.jpg";
 
 function Hero() {
     return (
-        <div className={"relative max-w-[1400px] lg:px-12 md:px-5 px-1 mx-auto sm:m-8"}>
+        <div className={"relative max-w-[1400px] lg:px-12 md:px-5 px-1 mx-auto sm:m-8 sm:mt-20 mt-16"}>
     
             <div className="flex md:flex-row flex-col justify-around items-center h-full md:gap-0 gap-4 z-10">     
 
@@ -56,7 +55,7 @@ function Hero() {
                 transition={{
                     duration:1.3,
                     ease: "easeInOut",
-                    delay: 6.2
+                    delay: 6.4
                 }}
                 >
                     

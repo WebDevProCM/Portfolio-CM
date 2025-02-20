@@ -38,9 +38,10 @@ const BlackSvg = ({height, width}: screenSizeType) =>{
         <motion.svg 
             initial={{top: "-300px"}}
             animate={{top: "-100vh", transition: {duration: 2, ease: [0.75, 0, 0.24, 1], delay: 6}, transitionEnd: {top: "100vh"}}}
-            className="fixed z-40 cursor-none pointer-events-none left-0 -top-[300px] w-screen h-[calc(100vh+600px)]"
+            className="absolute z-40 cursor-none pointer-events-none left-0 -top-[300px] w-full h-[calc(100vh+600px)]"
         >
             <motion.path
+                fill="#141516"
                 initial={{d: initialPath}} 
                 animate={{d: targetPath, transition: {duration: 2, ease: [0.75, 0, 0.24, 1], delay: 6}}}
                 d={initialPath}
@@ -67,25 +68,18 @@ function PageTransition() {
         return () => window.removeEventListener("resize", resize);
     }, [])
 
+
     const parentVariant = {
         animate: {
-        display: "none",
-        transition: {duration: 1 ,delay: 6 ,staggerChildren: 1 },
+            display: "none",
+            transition: {duration: 1 ,delay: 6 ,staggerChildren: 1 },
         },
     };
 
-    // const textVariant = {
-    //     initial: {opacity: 0},
-    //     animate: {                
-    //         opacity: [0,1,0],
-    //         transition: {duration:5.5, ease:"easeOut"},
-    //     }
-    // }
-
   return (    
-    <motion.div className="fixed h-screen w-screen top-0 left-0 z-50 overflow-hidden flex justify-center items-center"
-        animate={{display: "none"}}
-        transition={{delay: 9}}
+    <motion.div className="fixed h-screen w-screen top-0 left-0 bg-[#141516] z-[99] overflow-hidden flex justify-center items-center"
+        animate={{backgroundColor: "transparent"}}
+        transition={{delay: 1}}
     >
         <motion.div
             variants={parentVariant}
@@ -93,22 +87,11 @@ function PageTransition() {
             animate= "animate"
         >
 
-            {/* {texts.map((text, index) =>(
-                <motion.p 
-                    className='relative text-white text-6xl z-50 text-center'
-                    key={index}
-                    variants={textVariant}
-                >
-
-                    {text}
-
-                </motion.p>
-            ))} */}
-                <WordRotate
-                className="relative text-white text-6xl z-50 text-center font-bebas"
-                words={["Building the future,", "one line of code at a time", "Welcome to my portfolio", "your gateway to my digital journey", " "]}
-                duration={1650}
-                />
+        <WordRotate
+        className="relative text-white text-6xl z-50 text-center font-bebas"
+        words={["Building the future,", "one line of code at a time", "Welcome to my portfolio", "your gateway to my digital journey", " "]}
+        duration={1650}
+        />
 
         </motion.div>
         {screenSize.width > 0 && <BlackSvg {...screenSize}/>} 

@@ -1,8 +1,8 @@
 "use client";
 
-import clsx from 'clsx';
-import { useScroll, useTransform, MotionValue, motion } from 'framer-motion';
 import React, { useRef } from 'react'
+import { useScroll, useTransform, MotionValue, motion } from 'framer-motion';
+import clsx from 'clsx';
 
 
 type sliderProps = {
@@ -28,7 +28,6 @@ const ParallelText = () => {
         <div ref={slidersContainer}>
             <Slider left="-10%" progress={scrollYProgress} direction="left"/>
             <Slider left="-30%" progress={scrollYProgress} direction="right" className='text-stroke'/>
-            {/* <Slider left="-20%" progress={scrollYProgress} direction="left"/> */}
         </div>
     </motion.div>
   )

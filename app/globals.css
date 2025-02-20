@@ -8,9 +8,9 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-/* html{
+html{
   scroll-behavior: smooth;
-} */
+}
 
 a {
   scroll-behavior: smooth;
@@ -21,6 +21,7 @@ body{
   color: white;
   padding:10px 0px;
   /* background-color: #00010a; */
+  cursor: wait;
 }
 
 @media (prefers-color-scheme: dark) {

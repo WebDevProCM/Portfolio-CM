@@ -1,11 +1,11 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link';
 import {motion} from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
-import Link from 'next/link';
 
 function Contact() {
   return (

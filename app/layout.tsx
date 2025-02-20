@@ -2,7 +2,6 @@ import React from "react";
 import {Fjalla_One, Bebas_Neue, Roboto_Serif, Lora} from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import SmoothScrolling from "@/components/animations/SmoothScrolling";
 
 export const metadata = {
   title: "Chamod Udugama",
@@ -51,9 +50,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
         >
-          <SmoothScrolling>
+          
             {children}
-          </SmoothScrolling>
 
         </ThemeProvider>
         </body>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 import { FaReact } from "react-icons/fa";
 import { TbBrandJavascript } from "react-icons/tb";
 import { FaBootstrap } from "react-icons/fa";
@@ -11,11 +12,11 @@ import { RiNextjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { SiMysql } from "react-icons/si";
-import { motion } from 'framer-motion';
-import Particles from './ui/particles';
+import MagneticHover from './animations/MagneticHover';
+// import Particles from './ui/particles';
 
 
-function IconsSection() {
+const IconsSection = () => {
     const iconsArray = [
         <TbBrandJavascript size={120} key={4} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
         <SiTypescript size={85} key={10} className='md:mx-[40px] mx-[20px] my-[40px]'/>,
@@ -63,13 +64,13 @@ function IconsSection() {
       <div 
         className='relative overflow-hidden flex flex-row flex-wrap justify-center items-center max-w-[1400px] mx-auto my-[200px] lg:px-12 md:px-5 px-1'>
         <div className="w-full absolute inset-0 h-full">
-          <Particles
+          {/* <Particles
             className="absolute inset-0"
             quantity={300}
             ease={80}
             color={"#CBACF9"}
             refresh
-          />
+          /> */}
         </div>
         <motion.div
           className='w-full flex flex-wrap justify-center items-center'
@@ -84,12 +85,10 @@ function IconsSection() {
               className='relative z-20'
               key={i}
               variants={iconAnimations}
-              whileHover={screenSize ? bouncingAnimation : undefined}
-              whileTap={!screenSize ? bouncingAnimation : undefined}
               viewport={{once: true}}
               transition={{duration: 0.8}}
               >
-                {icon}
+                <MagneticHover>{icon}</MagneticHover>
               </motion.div>
             )
           })}

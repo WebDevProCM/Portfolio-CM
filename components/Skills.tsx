@@ -2,11 +2,11 @@
 
 import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion";
-import SkillProgress from './SkillProgress';
+import SkillProgress from '@/components/animations/SkillProgress';
 import { BorderBeam } from './ui/border-beam';
 
 
-function Skills() {
+const Skills = () => {
     const skills = [
         {stack:"Javascript", percent: 95},
         {stack:"Typescript", percent: 85},

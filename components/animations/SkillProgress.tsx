@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { useEffect, useState } from "react";
-import AnimatedCircularProgressBar from './ui/animated-circular-progress-bar';
 import { AnimatePresence } from 'framer-motion';
+import AnimatedCircularProgressBar from '@/components/ui/animated-circular-progress-bar';
 
 
 function SkillProgress({percent}: {percent: number}) {

@@ -2,10 +2,10 @@
 
 import {motion, useScroll, useTransform} from "framer-motion";
 import { useRef } from "react";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import { FaTrophy } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 function Education() {
     const educationRef = useRef(null)
@@ -29,7 +29,7 @@ function Education() {
             EDUCATION
         </motion.h1>
 
-            <VerticalTimeline className="z-50" animate={false}>
+            <VerticalTimeline className="z-30" animate={false}>
                 {educationList.map((education, index) => (
                     <VerticalTimelineElement
                         key={index}
