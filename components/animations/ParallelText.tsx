@@ -38,7 +38,7 @@ const Slider = ({left, progress, direction, className}: sliderProps) =>{
     const x = useTransform(progress, [0, 1], [-250 * dir, 250 * dir]);
 
     return (
-        <motion.div className='flex whitespace-nowrap relative gap-6 leading-[1] font-lora' style={{left, x}}>
+        <motion.div className='flex whitespace-nowrap relative gap-6 leading-[1] font-lora' style={{left, x}} transition={{type:"spring"}}>
             <p className={clsx('sm:text-[5vw] text-[10vw] text-white', className)}>FULL-STACK DEVELOPER</p>
             <p className={clsx('sm:text-[5vw] text-[10vw] text-white', className)}>FULL-STACK DEVELOPER</p>
             <p className={clsx('sm:text-[5vw] text-[10vw] text-white', className)}>FULL-STACK DEVELOPER</p>

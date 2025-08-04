@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Contact() {
   return (
-    <div className='max-w-[1400px] mx-auto text-center md:mt-[200px] mt-[100px] lg:px-12 md:px-5 px-1' id="contact">
+    <div className='max-w-[1400px] mx-auto text-center md:mt-[200px] mt-[100px] lg:px-12 md:px-5 px-1 scroll-mt-20' id="contact">
 
         <h1 className='max-w-[600px] mx-auto sm:leading-[45px] leading-10 md:text-[50px] text-[40px] dark:text-white text-page-black font-bebas'>
             {/* I&#39;m Ready to take your dreamed website to the  */}
@@ -36,7 +36,8 @@ function Contact() {
             </div>
         </button>
 
-        <div className='flex justify-between items-end mt-[130px] lg:px-12 md:px-5 px-1 dark:text-white text-page-black'>
+        <div className='flex md:flex-row flex-col-reverse justify-between md:items-end items-center gap-2 mt-[130px] lg:px-12 md:px-5 px-1 
+            dark:text-white text-page-black'>
             <p className='font-fjalla md:text-[15px] text-[10px] uppercase'>copyright &#169; 2025 Chamod Udugama</p>
             <div className='flex items-center gap-[10px]'>
                 <Link href="https://github.com/WebDevProCM" target='_blank'><FaGithub size={30}/></Link>

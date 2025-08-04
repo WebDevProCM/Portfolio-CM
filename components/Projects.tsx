@@ -42,7 +42,7 @@ function Projects() {
   return (
     <div 
     ref={projectRef}
-    className="overflow-hidden flex flex-col justify-center sm:gap-16 gap-8 items-center max-w-[1400px] mx-auto lg:px-12 md:px-5 px-1" id='projects'>
+    className="overflow-hidden flex flex-col justify-center sm:gap-16 gap-8 items-center max-w-[1400px] mx-auto lg:px-12 md:px-5 px-1 scroll-mt-20" id='projects'>
 
         <motion.h1 
             className='md:text-5xl text-3xl dark:text-page-purple text-page-black font-bebas mx-auto text-center mt-10' id="projects"

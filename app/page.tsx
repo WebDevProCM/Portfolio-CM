@@ -12,6 +12,7 @@ import IconsSection from "@/components/IconsSection";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import {AnimatePresence, motion} from "framer-motion"
+import Experience from "@/components/Experience";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +46,7 @@ export default function Home() {
       <Hero />
       <ParallelText />
       <About />
+      <Experience />
       <Education />
       <Skills />
       <IconsSection />

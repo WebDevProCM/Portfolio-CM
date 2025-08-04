@@ -13,21 +13,18 @@ function About() {
 
     <div 
     ref={aboutRef}
-    className='relative max-w-[1400px] mx-auto text-center md:my-[200px] my-[100px] lg:px-12 md:px-5 px-1 z-10 overflow-x-hidden' id="about">
+    className='relative max-w-[1400px] mx-auto text-center md:my-[200px] my-[100px] lg:px-12 md:px-5 px-1 z-10 overflow-x-hidden scroll-mt-20' 
+    id="about"
+    >
       
       <motion.h1 className='md:text-[50px] text-[40px] dark:text-page-purple text-page-black font-bebas mt-6' style={{scale: scaleText}}>
           ABOUT ME
       </motion.h1>
 
       <motion.hr 
-      className='max-w-[90px] h-[10px] bg-page-purple mx-auto'
-      style={{scaleX: scrollYProgress}}
-      // initial={{scaleX: 0}}
-      // whileInView={{scaleX: 1}}
-      // viewport={{ once: true }}
-      // transition={{delay: 0.3, type:"spring"}}
-      >
-      </motion.hr>
+        className='max-w-[90px] h-[10px] bg-page-purple mx-auto'
+        style={{scaleX: scrollYProgress}}
+      />
       
       <motion.p 
       className='mt-[80px] mx-auto font-fjalla md:text-[20px] text-[15px] leading-10 max-w-[900px] dark:text-white text-text-page-light'
